@@ -1,0 +1,61 @@
+{
+  "customize": {
+    "extra_dir": "", 
+    "git_src_dir": "src", 
+    "install_env": {
+      "USE_NEON": "1",
+      "PACKAGE_GIT": "NO",
+      "PACKAGE_SKIP_CLEAN_OBJ": "YES", 
+      "PACKAGE_SKIP_CLEAN_SRC_DIR": "YES", 
+      "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+      "PACKAGE_SUB_DIR": "src", 
+      "PACKAGE_URL": "https://github.com/ARM-software/ComputeLibrary"
+    }, 
+    "use_git_revision": "yes",
+    "version": "master"
+  }, 
+  "deps": {
+    "compiler": {
+      "local": "yes", 
+      "name": "C++ compiler", 
+      "sort": 30, 
+      "tags": "compiler,lang-cpp"
+    }
+  }, 
+  "end_full_path": {
+    "android": "src$#sep#$build$#sep#$libarm_compute.so",
+    "linux": "src/build/libarm_compute.so",
+    "mingw": "src\\build\\arm_compute.so",
+    "win": "src\\build\\arm_compute.dll"
+  }, 
+  "need_cpu_info": "yes", 
+  "only_for_host_os_tags": [
+    "windows",
+    "linux"
+  ], 
+  "only_for_target_os_tags": [
+    "windows",
+    "linux",
+    "android"
+  ], 
+  "package_extra_name": " (via SCons)", 
+  "process_script": "install", 
+  "soft_uoa": "fc544df6941a5491", 
+  "suggested_path": "lib-acl-scons", 
+  "tags": [
+    "lib",
+    "arm",
+    "acl",
+    "arm-compute-library",
+    "vneon",
+    "vmaster"
+  ], 
+  "use_preprocess_scripts_from_another_entry": {
+    "data_uoa": "fd44428fbc77f77f", 
+    "module_uoa": "84e27ad9dd12e734"
+  }, 
+  "use_scripts_from_another_entry": {
+    "data_uoa": "cd9ccc74060b3d18", 
+    "module_uoa": "script"
+  }
+}
