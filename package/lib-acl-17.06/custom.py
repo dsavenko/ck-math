@@ -332,6 +332,10 @@ def post_setup(i):
         sb+=eset+' CK_LFLAGS='+_slash(eifs+link_flags+eifs)+'\n\n'
         sb+=eset+' CK_SRC_FILES='+_slash(eifs+core_files+eifs)+'\n\n'
         sb+=eset+' ORIGINAL_PACKAGE_DIR='+_slash(pop)+'\n\n'
+        sb+=eset+' USE_BARE_METAL='+env.get('USE_BARE_METAL','')+'\n\n'
+        sb+=eset+' USE_CPPTHREADS='+env.get('USE_CPPTHREADS','')+'\n\n'
+        sb+=eset+' USE_OPENMP='+env.get('USE_OPENMP','')+'\n\n'
+        sb+=eset+' USE_NEON='+env.get('USE_NEON','')+'\n\n'
         sb+=eset+' CK_HOST_CPU_NUMBER_OF_PROCESSORS='+str(env.get('CK_HOST_CPU_NUMBER_OF_PROCESSORS', 1))+'\n\n'
 
         rest_params_var = '%*' if hname == 'win' else '$@'
